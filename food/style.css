@@ -378,7 +378,6 @@ body {
   border: none;
   border-bottom: 2px solid #ddd;
   padding: 1rem 0;
-  outline: none;
   
 }
 .form-container h2{
@@ -390,8 +389,6 @@ body {
 .form-container a{
   font-size: 1.2rem;
 }
-/* ######################################## footer ############################### */
-
 #footer h2{
   text-align: center;
   font-size: 2rem;
@@ -400,147 +397,3 @@ body {
   font-weight: 500;
   background: rgb(65,65,65);
 }
-
-
-/* ############## media qureies ################## */
-@media(max-width: 768px){
-  html {
-    font-size: 50%;
-  }
-  .navbar{
-    opacity: 0.95;
-  }
-  .navbar-container input[type='checkbox'],
-  .navbar-container .hamburger-line{
-    display: block;
-  }
-  .navbar-container{
-    display: block;
-    position: relative;
-    height: 64px;
-  }
-  .navbar-container input[type='checkbox']{
-    position: relative;
-    display: block;
-    height: 32px;
-    width: 40px;
-    top: 20px;
-    left: 20px;
-    z-index: 5;
-    opacity: 0;
-  }
-
-  .navbar-container .hamburger-line{
-    display: block;
-    height: 32px;
-    width: 40px;
-    position: absolute;
-    left: 20px;
-    top: 20px;
-    z-index: 2;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-  }
-  .navbar-container .hamburger-line .line{
-    display: block;
-    height: 4px;
-    width: 100%;
-    border-radius: 10px;
-    background: #333;
-  }
-  .navbar-container .hamburger-line .line1{
-    transform-origin: 0% 0%;
-    transition: transform 0.04s ease-in-out;
-  }
-  .navbar-container .hamburger-line .line2{
-   
-    transition: transform 0.04s ease-in-out;
-  }
-  .navbar-container .hamburger-line .line3{
-    transform-origin: 0% 100%;
-    transition: transform 0.04s ease-in-out;
-  }
-
-  .navbar .menu-items{
-    padding-top: 100px;
-    display: flex;
-    position: absolute;
-    top: 0px;
-    flex-direction: column;
-    background: #fff;
-    min-width: 300px;
-    height: 100vh;
-    transform: translateX(-150%);
-    padding-left: 50px;
-    margin-left: -40px;
-    transition: transform 0.5s ease-in-out;
-    box-shadow: 5px 0px 10px 0px #aaa;
-  }
-  .navbar .menu-items li{
-    margin-bottom: 3rem;
-    font-size: 2rem;
-    font-weight: 500;
-
-  }
-  .logo{
-    position: absolute;
-    top: 10px;
-    right: 15px;
-    font-size: 3rem;
-  }
-  .navbar-container input[type='checkbox']:checked~.menu-items{
-    transform :translateX(0);
-  }
-  .navbar-container input[type='checkbox']:checked~.hamburger-line .line1{
-    transform: rotate(45deg);
-  }
-  .navbar-container input[type='checkbox']:checked~.hamburger-line .line2{
-    transform: scaleY(0);
-  }
-  .navbar-container input[type='checkbox']:checked~.hamburger-line .line3{
-    transform: rotate(-45deg);
-  }
-  /* ######################## food category ############# */
-  .food-container{
-    flex-direction: column;
-    align-items: stretch;
-  }
-  .food-type:not(:last-child){
-    margin-bottom: 3rem;
-  }
-  .food-type{
-    box-shadow:5px 5px 10px 0px #aaa ;
-  }
-  .img-container{margin: 0;}
-
-  /* ######################### fode menu ################### */
-  .food-menu-container .food-menu-item{
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-  }
-
-  /* ########################## testimonial################## */
-  .testimonial-container{
-    flex-direction: column;
-  }
-  .testimonial-box:not(:last-child){
-    border-bottom: 2px solid #aaa;
-  }
-  /* ############################# contect ####################### */
-  .form-container{
-    width: 90%;
-  }
-  .contect-container{
-    display: flex;
-    flex-direction: column;
-  }
-  .contect-image{
-    width: 90%;
-    margin: 3rem;
-  }
-}
-
-
